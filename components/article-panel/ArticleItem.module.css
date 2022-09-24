@@ -1,0 +1,84 @@
+.ArticleItem {
+  position: relative;
+  border-radius: 12px;
+  border: 8px solid #000;
+  max-width: 345px;
+  padding: 8px;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.ArticleClip {
+  font-size: 32px;
+  position: absolute;
+  top: -28px;
+  left: calc(50% - 16px);
+  z-index: 2;
+}
+
+.ArticleTitle {
+  line-height: 1.2rem;
+  text-align: center;
+}
+
+.MuiSvgIcon-root.ArticleClip {
+  height: 50px;
+  width: 50px;
+}
+
+.ArticleThumbnail {
+  width: 100%;
+  border-radius: 6px;
+  filter: grayscale(1);
+  transition: filter 1.5s ease-in-out 0.75s;
+}
+
+.ArticleItem:hover > .ArticleThumbnail {
+  filter: grayscale(0);
+}
+
+.ArticleItem:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 1.5s ease-in-out, opacity 1.5s ease-in-out;
+}
+
+.ArticleItem:hover:after {
+  clip-path: inset(0 0 0 0);
+  opacity: 0;
+}
+
+.scene {
+  flex: 1;
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  transform: rotateY(180deg);
+}
+
+.ArticleItem:hover > .card {
+  transform: rotateY(180deg);
+}

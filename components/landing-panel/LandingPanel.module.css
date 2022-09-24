@@ -1,0 +1,25 @@
+.LandingPanel {
+  height: 100vh;
+  background-color: black; /* #091921;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: landing-page 1.2s ease-in-out forwards;
+}
+
+.Logo {
+  max-width: 64px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+@keyframes landing-page {
+  0% {
+    height: 150px;
+  }
+  100% {
+    height: 100vh;
+  }
+}

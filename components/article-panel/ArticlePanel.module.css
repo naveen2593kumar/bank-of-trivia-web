@@ -1,0 +1,31 @@
+.articlePanel {
+  background-color: #fff;
+  padding: 32px 5%;
+}
+
+.articlesWrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto auto;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.articleCollage {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 800px) {
+  .articlesWrapper {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .articlesWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

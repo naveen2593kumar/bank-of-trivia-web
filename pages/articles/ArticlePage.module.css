@@ -1,0 +1,38 @@
+.ArticlePageHeader {
+  height: 96px;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  z-index: 100;
+  /* border-bottom: 8px solid #fff; */
+  animation: article-page 1.2s ease-in-out forwards;
+}
+
+@keyframes article-page {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 96px;
+  }
+}
+
+.Logo {
+  max-width: 64px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.ArticlePageWrapper {
+  padding: 16px 3%;
+}
+
+.ArticlePageImage {
+  width: 100%;
+}
+
+.ArticlePageYoutubeFrame {
+  width: 100%;
+}
